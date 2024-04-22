@@ -47,5 +47,5 @@ extension NewsApi {
 public enum APIConstants {
     static let newsAPIBaseURL = "https://api.nytimes.com"
     static let newsAPIKey = "j5GCulxBywG3lX211ZAPkAB8O381S5SM"
-    static let imageBaseURL = "https://www.nytimes.com/"
+    public static let imageBaseURL = "https://www.nytimes.com/"
 }
