@@ -7,7 +7,7 @@
 import Foundation
 import UIKit
 
-protocol NetworkService {
+public protocol NetworkService {
     @discardableResult
     func dataRequest<T: Decodable>(_ endPoint: APIEndPoint, objectType: T.Type, completion: @escaping (Result<T, NetworkError>) -> Void) -> URLSessionDataTask
     
