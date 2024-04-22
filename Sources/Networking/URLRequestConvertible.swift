@@ -6,13 +6,13 @@
 
 import Foundation
 
-protocol URLRequestConvertible {
+public protocol URLRequestConvertible {
     func asURLRequest() throws -> URLRequest
 }
 
 extension URLRequestConvertible where Self: APIEndPoint {
     
-    func asURLRequest() throws -> URLRequest {
+    public func asURLRequest() throws -> URLRequest {
         var components = URLComponents(url: baseURL, resolvingAgainstBaseURL: false)
         
         components?.path = path

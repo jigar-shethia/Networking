@@ -5,7 +5,7 @@
 //  Created by Jigar Shethia on 29/03/24.
 import Foundation
 
-enum NetworkError: Swift.Error, CustomStringConvertible {
+public enum NetworkError: Swift.Error, CustomStringConvertible {
     
     case apiError(Swift.Error)
     case invalidStatusCode(Int)

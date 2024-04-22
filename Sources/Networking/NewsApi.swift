@@ -13,26 +13,26 @@ public enum NewsApi: APIEndPoint, URLRequestConvertible {
 }
 
 extension NewsApi {
-    var baseURL: URL {
+    public var baseURL: URL {
         return URL(string: APIConstants.newsAPIBaseURL)!
     }
     
-    var method: HTTPMethod {
+    public var method: HTTPMethod {
         return .get
     }
 
-    var shouldCache: Bool {
+    public var shouldCache: Bool {
         return false
     }
     
-    var path: String {
+    public var path: String {
         switch self {
         case .getNewsFor:
             return "/svc/search/v2/articlesearch.json"
         }
     }
     
-    var parameters: [String : Any] {
+    public var parameters: [String : Any] {
         switch self {
         case let .getNewsFor(type):
             return [

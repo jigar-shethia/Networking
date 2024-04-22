@@ -6,12 +6,12 @@
 
 import Foundation
 
-enum HTTPMethod: String {
+public enum HTTPMethod: String {
     case get = "GET"
     case post = "POST"
 }
 
-protocol APIEndPoint: URLRequestConvertible {
+public protocol APIEndPoint: URLRequestConvertible {
     var baseURL: URL { get }
     var path: String { get }
     var method: HTTPMethod { get }
@@ -22,7 +22,7 @@ protocol APIEndPoint: URLRequestConvertible {
 
 extension APIEndPoint {
     
-    var headers: [String: String]? {
+   public var headers: [String: String]? {
         return [
             "Accept": "application/json",
             "Content-Type": "application/json"
