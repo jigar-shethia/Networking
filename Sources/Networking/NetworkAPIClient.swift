@@ -13,7 +13,7 @@ protocol NetworkService {
     
 }
 
-final class NetworkAPIClient: NetworkService {
+final public class NetworkAPIClient: NetworkService {
 
     private let session: URLSession
 
@@ -29,7 +29,7 @@ final class NetworkAPIClient: NetworkService {
 
     //MARK: DataRequest
     @discardableResult
-    func dataRequest<T: Decodable>(_ endPoint: APIEndPoint, objectType: T.Type, completion: @escaping (Result<T, NetworkError>) -> Void) -> URLSessionDataTask {
+    public func dataRequest<T: Decodable>(_ endPoint: APIEndPoint, objectType: T.Type, completion: @escaping (Result<T, NetworkError>) -> Void) -> URLSessionDataTask {
         
         var request: URLRequest
         do {

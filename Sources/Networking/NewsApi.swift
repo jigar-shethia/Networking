@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum NewsApi: APIEndPoint, URLRequestConvertible {
+public enum NewsApi: APIEndPoint, URLRequestConvertible {
     
     case getNewsFor(type: String)
 }
