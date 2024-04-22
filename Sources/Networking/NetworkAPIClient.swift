@@ -17,13 +17,13 @@ final public class NetworkAPIClient: NetworkService {
 
     private let session: URLSession
 
-    static var defaultSession: URLSession = {
+    public static var defaultSession: URLSession = {
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = 30
         return URLSession(configuration: configuration)
     }()
 
-    init(session: URLSession = NetworkAPIClient.defaultSession) {
+    public init(session: URLSession = NetworkAPIClient.defaultSession) {
         self.session = session
     }
 
